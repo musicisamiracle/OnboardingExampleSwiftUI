@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var viewModel: OnboardingViewModel
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Image(viewModel.onboardingModel.backgroundImageName)
+            .resizable()
+            .ignoresSafeArea()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: OnboardingViewModel(onboardingModel: .first))
+            
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct OnboardingExampleSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: OnboardingViewModel(onboardingModel: .first))
         }
     }
 }
