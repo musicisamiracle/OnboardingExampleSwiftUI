@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OnboardingModel {
+struct OnboardingModel: Equatable {
     let backgroundImageName: String
     let title: String
     

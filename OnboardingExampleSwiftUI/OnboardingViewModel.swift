@@ -13,4 +13,18 @@ class OnboardingViewModel: ObservableObject {
     init(onboardingModel: OnboardingModel) {
         self.onboardingModel = onboardingModel
     }
+    
+    func proceedToNextScreen() {
+        switch self.onboardingModel {
+        case .first:
+            self.onboardingModel = .second
+        case .second:
+            self.onboardingModel = .third
+        case .third:
+            self.onboardingModel = .first
+        default:
+            self.onboardingModel = .first
+        }
+        
+    }
 }

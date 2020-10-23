@@ -16,14 +16,15 @@ struct ContentView: View {
                 Spacer()
                 ZStack {
                     HStack {
-                        VStack(alignment: .leading) {
+                        VStack(alignment: .leading, spacing: 10) {
                             Image(systemName: "location.fill")
                             Text(viewModel.onboardingModel.title)
                             Text("more text")
                             Text("second line of text that is much longer and longer and longer")
                             Button("button title") {
-                                print("button clicked")
+                                self.viewModel.proceedToNextScreen()
                             }
+                            .buttonStyle(OnboardingButtonStyle())
                         }
                         Spacer()
                     }

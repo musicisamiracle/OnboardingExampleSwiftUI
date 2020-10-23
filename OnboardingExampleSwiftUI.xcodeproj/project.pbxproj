@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB86D9F325432FDD0004E266 /* OnboardingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB86D9F225432FDD0004E266 /* OnboardingButtonStyle.swift */; };
 		ABCD8212253A0EBC009799EE /* OnboardingExampleSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCD8211253A0EBC009799EE /* OnboardingExampleSwiftUIApp.swift */; };
 		ABCD8214253A0EBC009799EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCD8213253A0EBC009799EE /* ContentView.swift */; };
 		ABCD8216253A0EBD009799EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABCD8215253A0EBD009799EE /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB86D9F225432FDD0004E266 /* OnboardingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButtonStyle.swift; sourceTree = "<group>"; };
 		ABCD820E253A0EBC009799EE /* OnboardingExampleSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnboardingExampleSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABCD8211253A0EBC009799EE /* OnboardingExampleSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingExampleSwiftUIApp.swift; sourceTree = "<group>"; };
 		ABCD8213253A0EBC009799EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				ABCD8217253A0EBD009799EE /* Preview Content */,
 				ABCD8221253A1339009799EE /* OnboardingViewModel.swift */,
 				ABCD8224253A1787009799EE /* OnboardingModel.swift */,
+				AB86D9F225432FDD0004E266 /* OnboardingButtonStyle.swift */,
 			);
 			path = OnboardingExampleSwiftUI;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB86D9F325432FDD0004E266 /* OnboardingButtonStyle.swift in Sources */,
 				ABCD8225253A1787009799EE /* OnboardingModel.swift in Sources */,
 				ABCD8214253A0EBC009799EE /* ContentView.swift in Sources */,
 				ABCD8222253A133A009799EE /* OnboardingViewModel.swift in Sources */,
