@@ -11,30 +11,31 @@ struct ContentView: View {
     @ObservedObject var viewModel: OnboardingViewModel
 
     var body: some View {
-        ZStack{
+        ZStack {
             VStack {
                 Spacer()
                 ZStack {
-                    HStack {
-                        VStack(alignment: .leading, spacing: 10) {
-                            Image(systemName: "location.fill")
-                            Text(viewModel.onboardingModel.title)
-                            Text("more text")
-                            Text("second line of text that is much longer and longer and longer")
-                            Button("button title") {
-                                self.viewModel.proceedToNextScreen()
-                            }
-                            .buttonStyle(OnboardingButtonStyle())
+                    VStack(alignment: .leading, spacing: 10) {
+                        Image(systemName: viewModel.onboardingModel.systemImageName)
+                        Text(viewModel.onboardingModel.title)
+                            .font(Font.system(size: 24).weight(.black))
+                            .fixedSize(horizontal: false, vertical: true)
+                        ForEach(viewModel.onboardingModel.body, id: \.self) { (text) in
+                            Text(text)
+                                .font(Font.system(size: 15).weight(.medium))
                         }
-                        Spacer()
+                        Button(viewModel.onboardingModel.buttonTitle) {
+                            self.viewModel.proceedToNextScreen()
+                        }
+                        .buttonStyle(OnboardingButtonStyle())
                     }
                     .foregroundColor(.white)
                 }
-                .padding()
-                .background(Color.black.opacity(0.8))
+                .padding(20.0)
+                .background(Color.black.opacity(0.7))
                 .cornerRadius(10)
             }
-            .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
+            .padding(EdgeInsets(top: 0, leading: 15, bottom: 20, trailing: 15))
         }
         .background(Image(viewModel.onboardingModel.backgroundImageName)
                     .resizable()
@@ -44,7 +45,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewModel: OnboardingViewModel(onboardingModel: .first))
+        ContentView(viewModel: OnboardingViewModel(onboardingModel: .second))
             
     }
 }

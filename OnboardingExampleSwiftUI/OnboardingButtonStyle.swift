@@ -10,10 +10,11 @@ import SwiftUI
 struct OnboardingButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
             configuration.label
+                .font(Font.system(size: 15).weight(.heavy))
                 .frame(maxWidth: .infinity)
                 .padding()
                 .foregroundColor(.white)
-                .background(Color.green)
+                .background(Color.activeGreen)
                 .cornerRadius(40)
     }
 }
