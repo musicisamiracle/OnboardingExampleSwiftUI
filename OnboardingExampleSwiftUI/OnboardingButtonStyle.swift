@@ -16,6 +16,9 @@ struct OnboardingButtonStyle: ButtonStyle {
                 .foregroundColor(.white)
                 .background(Color.activeGreen)
                 .cornerRadius(40)
+                .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
+                .opacity(configuration.isPressed ? 0.8 : 1.0)
+                
     }
 }
 
